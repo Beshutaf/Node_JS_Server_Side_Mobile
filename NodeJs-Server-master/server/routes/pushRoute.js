@@ -3,7 +3,7 @@ const Router = express.Router();
 
 Router.post("/sendPush", (request, res) => {
   var data = {
-    app_id: "aee9826e-2e23-4762-8059-758f6f87a042",
+    app_id: "c3a913ba-a482-4e9b-ad85-e73f2c4e3397",
     contents: {
       "en": request.body.message
     },
@@ -13,7 +13,7 @@ Router.post("/sendPush", (request, res) => {
   }
   var headers = {
     "Content-Type": "application/json; charset=utf-8",
-    "Authorization": "Basic ODgwYzY3ODItZDU0NC00ZjgyLTg0YjMtNjM5ODNiMGZjNDRk"
+    "Authorization": "Basic N2FmMzIyZmMtMjI3Ni00MDI3LTg4YmQtMDI0YzhiNDY4ZmFm"
   };
 
   var options = {
