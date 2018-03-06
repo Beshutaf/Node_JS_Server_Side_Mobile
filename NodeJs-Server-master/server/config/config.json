@@ -6,7 +6,7 @@
   },
   "development": {
     "PORT": 3000,
-    "MONGODB_URI": "mongodb://localhost:27017/users",
+    "MONGODB_URI": "mongodb://localhost:27017/beshutafapp",
     "JWT_SECRET": "asdf334rgfdzgbdsy64y45gsreg4q5t3"
   }
 }
