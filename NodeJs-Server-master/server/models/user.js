@@ -55,13 +55,13 @@ var UserSchema = new mongoose.Schema({
     }
   }]
 });
+
 UserSchema.methods.encrypt = function(password) {
   var User = this;
   bcrypt.genSalt(10, (err, salt) => {
     bcrypt.hash(password, salt, (err, hash) => {
       console.log("\n    old pass   " + password);
       console.log("/n    my hashed:   " + hash);
-
     })
   });
   //User.password=hash;
@@ -202,20 +202,15 @@ module.exports = {
   user
 };
 
-/*var newUser = new user({
-
-    name:'alaZme'
+/*var firstUser = new user({
+  name: 'admin',
+  password: "testing123",
+  email: "idan.miller@gmail.com",
+  authen: "A"
 });
 
-var newUserr = new user({
-  name:'ala',
-  pass:"123",
- mail:"alaazme1@live.com"
-
-});
-newUserr.save().then((doc) =>{
-    console.log("saved user", doc);
-},(e)=>{
-    console.log("saved user err doc",e);
-})
-*/
+firstUser.save().then((doc) => {
+  console.log("saved user", doc);
+}, (e) => {
+  console.log("saved user err doc", e);
+})*/
