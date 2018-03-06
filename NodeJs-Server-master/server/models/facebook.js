@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 const facebookModel = new Schema({
 	name: String,
 	message: String,
-	imageUrl: String
+	imageUrl: String,
+	url: String
 });
 
 const Facebook = mongoose.model('facebook', facebookModel);
