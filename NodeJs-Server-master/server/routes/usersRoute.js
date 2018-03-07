@@ -169,6 +169,9 @@ Router.post('/autologin', (req, res) => {
     //res.status(400).send(); 
     //  return false;
     // }  
+  },
+  (error) => {
+    res.status(401).send();
   });
 });
 
@@ -215,7 +218,7 @@ Router.post('/login', (req, res) => {
 
     });
   }).catch((e) => {
-    res.status(400).send();
+    res.status(401).send();
   });
   //console.log("authen type:  "+ res);
   //  console.log('Cookies: ', req.cookies);
